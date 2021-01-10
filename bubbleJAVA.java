@@ -25,7 +25,7 @@ public class bubbleJAVA {
     public static void main(String[] args) {
         int[] tall = new int[10];
         try {
-            Scanner scanner = new Scanner(new File("C:\\Users\\BITAN\\Documents\\JAVASCRIPT\\New.txt"));
+            Scanner scanner = new Scanner(new File("E:\Codes\cse425_benchmarkingnumbers.txt"));
 
             int i = 0;
             while (scanner.hasNextInt()) {

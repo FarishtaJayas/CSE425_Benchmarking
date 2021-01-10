@@ -18,4 +18,4 @@ bubbleSort(arr)
 
 print ("Sorted array is:") 
 for i in range(len(arr)): 
-    print ("%s" %arr[i]), 
+    print ("%s" %arr[i])
