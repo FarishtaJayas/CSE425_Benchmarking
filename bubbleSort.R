@@ -1,3 +1,4 @@
+start_time<-Sys.time()
 
 bubblesort <- function(arr){
   
@@ -27,3 +28,7 @@ sortedarray<-bubblesort(y)
 print("Sorted array is:")
 
 sortedarray
+
+end_time<-Sys.time()
+
+end_time-start_time
