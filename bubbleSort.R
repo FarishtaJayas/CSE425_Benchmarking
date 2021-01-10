@@ -17,7 +17,6 @@ bubblesort <- function(arr){
       }
     }
   }
-  print(v)
   arr = v 
 }
 
