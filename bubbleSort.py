@@ -1,14 +1,21 @@
-f = open('E:\Codes\cse425_benchmarking\digits.txt', 'r')
-my_list = f.read()
-print(my_list)
-length = len(my_list)
+def bubbleSort(arr):
+    n = len(arr)
+    
+    for i in range(n):
+        
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
-for line in my_list:
-    my_list.append(line)
-for i in str(length):
-    for j in str(length-1):
-        if my_list[j] > my_list[j+1]:
-            my_list[j], my_list[j+1] = my_list[j+1], my_list[j]
-            print(my_list)
+arr = list()
+filename = 'numbers.txt'
+with open(filename) as fin:
+    for line in fin:
+        arr.append(line)
+print(arr)  
 
-f.close()
+bubbleSort(arr)
+
+print ("Sorted array is:") 
+for i in range(len(arr)): 
+    print ("%s" %arr[i]), 
