@@ -1,10 +1,11 @@
-package org.bitan.bubble;
+
+package BubbleSort;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class bubbleJAVA {
+public class Main {
 
     static void bubbleSort(int[] arr) {
         int n = arr.length;
@@ -23,9 +24,9 @@ public class bubbleJAVA {
     }
 
     public static void main(String[] args) {
-        int[] tall = new int[10];
+        int[] tall = new int[1000];
         try {
-            Scanner scanner = new Scanner(new File("E:\Codes\cse425_benchmarkingnumbers.txt"));
+            Scanner scanner = new Scanner(new File("E:\\Codes\\cse425_benchmarking\\numbers.txt"));
 
             int i = 0;
             while (scanner.hasNextInt()) {
