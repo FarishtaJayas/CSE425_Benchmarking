@@ -32,12 +32,12 @@ void printArray(int arr[], int size)
 
 int main() {
    //initialize the array size
-   int arr[1000];
+   int arr[100000];
    ifstream is("numbers.txt");
    int cnt= 0;
    int x;
    // check that array is not already full
-   while (cnt < arr[1000] && is >> x)
+   while (cnt < arr[100000] && is >> x)
    // and read integer from file
    arr[cnt++] = x;
 

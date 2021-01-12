@@ -31,7 +31,7 @@ void printArray(int arr[], int size)
 
 int main(void)
 {
-    int arr[1000];
+    int arr[100000];
     int i = 0;
     FILE * fp;
 

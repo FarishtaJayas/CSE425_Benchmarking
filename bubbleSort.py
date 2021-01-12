@@ -1,4 +1,4 @@
-def bubbleSort(arr):
+def bubblesort(arr):
     n = len(arr)
     
     for i in range(n):
@@ -14,7 +14,7 @@ with open(filename) as fin:
         arr.append(line)
 print(arr)  
 
-bubbleSort(arr)
+bubblesort(arr)
 
 print ("Sorted array is:") 
 for i in range(len(arr)): 
