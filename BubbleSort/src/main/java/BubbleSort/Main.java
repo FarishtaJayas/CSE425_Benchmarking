@@ -24,7 +24,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[] tall = new int[1000];
+        int[] tall = new int[1000000];
         try {
             Scanner scanner = new Scanner(new File("E:\\Codes\\cse425_benchmarking\\numbers.txt"));
 
