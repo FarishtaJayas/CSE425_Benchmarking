@@ -1,21 +1,27 @@
-function myfunsc(inputArr) {
-   
-    let bubbleSort = (inputArr) => {
-     let len = inputArr.length;
-     for (let i = 0; i < len; i++) {
-         for (let j = 0; j < len; j++) {
-             if (inputArr[j] > inputArr[j + 1]) {
-                 let tmp = inputArr[j];
-                 inputArr[j] = inputArr[j + 1];
-                 inputArr[j + 1] = tmp;
-             }
-         }
-     }
-     return inputArr;
- };
-    
- }
+function bubble_Sort(a)
+{
+    var swapp;
+    var n = a.length-1;
+    var x=a;
+    do {
+        swapp = false;
+        for (var i=0; i < n; i++)
+        {
+            if (x[i] < x[i+1])
+            {
+               var temp = x[i];
+               x[i] = x[i+1];
+               x[i+1] = temp;
+               swapp = true;
+            }
+        }
+        n--;
+    } while (swapp);
+ return x; 
+}
 
- var fs = require('fs');
- var text = fs.readFileSync("./numbers.txt").bubbleSort;
- var textByLine = text.split("\n")
+var fs = require('fs');
+var text = fs.readFileSync("./numbers.txt").toString('utf-8');
+var textByLine = text.split("\n")
+ 
+console.log(bubble_Sort(a));
