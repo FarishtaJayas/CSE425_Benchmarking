@@ -6,9 +6,9 @@ using namespace std;
 
 int main() {
 
-   int n=5;
-   int value2[n][n], value1[n][n], mul[n][n];
-   ifstream is("number2.txt");
+   long long int n=100;
+   long long int value2[n][n], value1[n][n], mul[n][n];
+   ifstream is("numbers.txt");
 
    for(int i=0; i<n; i++)
     {
