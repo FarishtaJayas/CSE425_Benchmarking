@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void swap(int *xp, int *yp)
+void swap(long long int *xp, long long int *yp)
 {
-    int temp = *xp;
+    long long int temp = *xp;
     *xp = *yp;
     *yp = temp;
 }
@@ -31,7 +31,7 @@ void printArray(int arr[], int size)
 
 int main(void)
 {
-    int arr[100000];
+    int arr[1000000];
     int i = 0;
     FILE * fp;
 

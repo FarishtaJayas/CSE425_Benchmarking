@@ -1,10 +1,10 @@
 start_time<-Sys.time()
 
-x<-scan(file = "number2.txt", what = numeric(), sep = "\n")
-y<-scan(file = "number2.txt", what = numeric(), sep = "\n") 
+x<-scan(file = "numbers.txt", what = numeric(), sep = "\n")
+y<-scan(file = "numbers.txt", what = numeric(), sep = "\n") 
 
-x<-matrix(x, nrow = 5, byrow = TRUE)
-y<-matrix(y, nrow=5, byrow = TRUE)
+x<-matrix(x, nrow = 1000, byrow = TRUE)
+y<-matrix(y, nrow=1000, byrow = TRUE)
 
 
 print("multiplied matrix is:")

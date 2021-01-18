@@ -2,12 +2,12 @@
 
 int main()
 {
-    int i,j,k, n=5;
-    int value1[n][n];
-    int value2[n][n];
-    int mul[n][n];
+     long long int i,j,k, n=100;
+     long long int value1[n][n];
+     long long int value2[n][n];
+    long long int mul[n][n];
     FILE *file;
-    file = fopen("number2.txt","r");
+    file = fopen("numbers.txt","r");
 
     for(i=0; i<n; i++)
     {

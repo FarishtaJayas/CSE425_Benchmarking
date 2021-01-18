@@ -1,6 +1,6 @@
-with open('number2.txt') as f:
+with open('numbers.txt') as f:
     l = [int(i) for i in f]
-    part = 5
+    part = 1000000
     x = []
     start, end = 0, part
 
@@ -14,7 +14,7 @@ with open('number2.txt') as f:
             end += part
     y = x   #copying x into 2 new arrays
 
-result=[[0 for col in range(5)] for row in range(5)]
+result=[[0 for col in range(1000)] for row in range(1000)]
 
 
 for r in y:
