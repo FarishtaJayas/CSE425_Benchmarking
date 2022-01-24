@@ -11,6 +11,7 @@ library(ggthemes)
 library("ggsci")
 library(viridis)
 library(reshape2)
+library(ggpubr)
 
 
 my_data <- read_excel("data.xlsx")
@@ -80,7 +81,7 @@ ggplot(data_long, aes(x=variable, y=value, fill=variable)) +
 
 
 
-ggplot(data_long, aes(x=variable, y=value, fill=variable)) +
+g1<-ggplot(data_long, aes(x=variable, y=value, fill=variable)) +
   geom_boxplot(alpha=0.3) +
   theme(legend.position="none")+
   theme_stata() + scale_fill_stata()+
@@ -90,7 +91,7 @@ ggplot(data_long, aes(x=variable, y=value, fill=variable)) +
   xlab("Languages")+
   ylab("Score")
 
-ggsave("Readability boxplot.tiff",device='tiff', dpi="print")
+ggsave("Readability boxplot.tiff",device='tiff', dpi="300")
 
 readability_corrplot <- cor(my_data_readability)
 c1<-corrplot(readability_corrplot, method = "circle")
@@ -316,3 +317,43 @@ readability_importance_old_programmer<-sum(old_programmer_data$Importance_Reliab
 writability_importance_old_programmer<-sum(old_programmer_data$Importance_Writability)/nrow(old_programmer_data)
 
 #non programmers do not understand the importance of readability & writability
+
+
+g1<-ggplot(data_long, aes(x=variable, y=value, fill=variable)) +
+  geom_boxplot(alpha=0.3) +
+  theme(legend.position="none")+
+  theme_stata() + scale_fill_stata()+
+  coord_flip()+
+  theme(axis.text.y=element_text(angle=360, hjust=1))+
+  ggtitle("Multiple boxplots for Readability comparison")+
+  xlab("Languages")+
+  ylab("Score")
+
+g2<- ggplot(data2, aes(x=variable, y=value, fill=variable)) +
+  geom_boxplot(alpha=0.3) +
+  theme(legend.position="none")+
+  theme_stata() + scale_fill_stata()+
+  coord_flip()+
+  theme(axis.text.y=element_text(angle=360, hjust=1))+
+  ggtitle("Multiple boxplots for Readability comparison (Non programmers)")+
+  xlab("Languages")+
+  ylab("Score")
+
+g3<- ggplot(data3, aes(x=variable, y=value, fill=variable)) +
+  geom_boxplot(alpha=0.3) +
+  theme(legend.position="none")+
+  theme_stata() + scale_fill_stata()+
+  coord_flip()+
+  theme(axis.text.y=element_text(angle=360, hjust=1))+
+  ggtitle("Multiple boxplots for Readability comparison (Experienced programmers)")+
+  xlab("Languages")+
+  ylab("Score")
+
+
+
+grid.arrange(g1, g2, g3 + rremove("x.text"), 
+             ncol = 1, nrow = 3)
+
+ggsave("Readability boxplot_new.tiff",device='tiff' )
+
+#
